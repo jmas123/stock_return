@@ -127,7 +127,7 @@ Total Return: 46.37%
 
 Strategy vs B&H: −5.91% (slightly underperformed)
 
-💡 Interpretation:
+Interpretation:
 The model demonstrates strong risk-adjusted performance (Sharpe 1.35) and consistent directional accuracy (58%), with notably lower drawdowns than buy-and-hold.
 ```
 
