@@ -178,13 +178,9 @@ Contributions are welcome! Feel free to:
 
 This project is for **educational purposes only**. It is not financial advice. Past performance does not guarantee future results. Always do your own research before making investment decisions.
 
-## License
-
-MIT License - feel free to use this code for learning and experimentation.
-
 ## Author
 
-Built as a first ML project to learn about financial machine learning, time-series prediction, and quantitative trading strategies.
+Built by Jude El Masri as a first ML project to learn about financial machine learning, time-series prediction, and quantitative trading strategies.
 
 ---
 
