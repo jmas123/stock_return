@@ -30,7 +30,6 @@ def plot_stock_data(x_test, y_test, y_test_pred, symbol):
     ax1.grid(True, alpha=0.3)
 
 
-    # Volume over time
     test_idx = x_test.index
     ax2.plot(test_idx, y_test, label='Actual', marker='o', markersize=3)
     ax2.plot(test_idx, y_test_pred, label='Predicted', marker='s', markersize=3)
