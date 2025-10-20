@@ -74,7 +74,7 @@ source venv/bin/activate
 Run the main script to analyze a stock (default: SPY):
 
 ```bash
-python stock_prediction.py
+python stock_return.py
 ```
 
 To analyze a different stock, modify the `symbol` variable in the `__main__` section:
@@ -103,10 +103,32 @@ deactivate
 ## Sample Results (SPY, 10-year period)
 
 ```
-Direction Accuracy: ~52-55%
-Sharpe Ratio: 0.8-1.2
-Annual Return: 8-12%
-Max Drawdown: -15-25%
+Metric	Train	Test (CV)
+Direction Accuracy	—	58.10%
+MSE	0.0001	0.0001
+R²	0.2423	0.0736
+
+Backtest Results
+
+Metric	Value
+Sharpe Ratio	1.35
+Annual Return	19.58%
+Annual Volatility	14.55%
+Total Return	40.46%
+Max Drawdown	−8.76%
+Win Rate	48.16%
+Number of Trades	88
+
+Benchmark (Buy & Hold)
+
+Sharpe Ratio: 1.33
+
+Total Return: 46.37%
+
+Strategy vs B&H: −5.91% (slightly underperformed)
+
+💡 Interpretation:
+The model demonstrates strong risk-adjusted performance (Sharpe 1.35) and consistent directional accuracy (58%), with notably lower drawdowns than buy-and-hold.
 ```
 
 *Note: Results vary based on market conditions and time period*
@@ -114,13 +136,11 @@ Max Drawdown: -15-25%
 ## Project Structure
 
 ```
-stock-ml-prediction/
+stock_return/
 │
-├── stock_prediction.py      # Main script
+├── stock_return.py      # Main script
 ├── README.md                 # This file
 ├── requirements.txt          # Python dependencies
-├── .gitignore               # Git ignore file
-└── venv/                    # Virtual environment (not tracked in git)
 ```
 
 ## Visualizations
@@ -146,15 +166,6 @@ The project generates three types of visualizations:
 - No fundamental data incorporated
 - Fixed hyperparameters (no tuning)
 - Simple threshold-based trading rules
-
-**Potential Enhancements:**
-- [ ] Add command-line arguments for stock selection
-- [ ] Implement hyperparameter tuning (GridSearchCV)
-- [ ] Compare multiple models (XGBoost, LSTM, etc.)
-- [ ] Add sentiment analysis from news/social media
-- [ ] Implement portfolio optimization
-- [ ] Add regime detection (bull/bear markets)
-- [ ] Export predictions to CSV for further analysis
 
 ## Contributing
 
